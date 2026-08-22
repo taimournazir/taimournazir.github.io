@@ -341,22 +341,59 @@ My cybersecurity lab environment allows me to safely experiment with attack tech
 ### Environment
 
 ```text
-                        Internet / Lab Network
-                                 |
-                              pfSense
-                                 |
-             +-------------------+-------------------+
-             |                   |                   |
-        Kali Linux         Windows Systems      Linux Systems
-             |                   |                   |
-             +-------------------+-------------------+
-                                 |
-                       Security Monitoring
-                                 |
-             +-------------------+-------------------+
-             |                   |                   |
-           Splunk             Elastic          Security Onion
-             |                   |                   |
-             +-------------------+-------------------+
-                                 |
-                         Investigation
+                      Internet / Lab Network
+                               |
+                            pfSense
+                               |
+           +-------------------+-------------------+
+           |                   |                   |
+      Kali Linux         Windows Systems      Linux Systems
+           |                   |                   |
+           +-------------------+-------------------+
+                               |
+                     Security Monitoring
+                               |
+           +-------------------+-------------------+
+           |                   |                   |
+         Splunk             Elastic          Security Onion
+           |                   |                   |
+           +-------------------+-------------------+
+                               |
+                       Investigation
+```
+
+The environment is virtualized primarily using **Proxmox** and allows me to study both attacker behavior and defensive security visibility.
+
+```text
+Alert / Suspicious Activity
+          |
+          v
+      Validate
+          |
+          v
+   Establish Scope
+          |
+          v
+ Collect Evidence
+          |
+          v
+ Correlate Events
+          |
+          v
+ Identify Behavior
+          |
+          v
+ Map to MITRE ATT&CK
+          |
+          v
+ Determine Impact
+          |
+          v
+ Contain / Remediate
+          |
+          v
+ Document Findings
+          |
+          v
+ Improve Detection
+```
