@@ -1,53 +1,19 @@
-# Heading 1
-## Heading 2
-### Heading 3
+---
+layout: default
+---
 
-This is a standard paragraph of text. You can add emphasis easily:
-*   This text is **bold**.
-*   This text is *italicized*.
-*   This text features ~~strikethrough~~.
-*   This is a [Hyperlink to Markdown Guide](https://www.markdownguide.org).
+# Taimour Nazir
 
-### Lists
+Cybersecurity Professional | Security Operations | Incident Response
 
-**Unordered List:**
-*   Apple
-*   Banana
-*   Cherry
-    *   Nested item example
+## About Me
 
-**Ordered List:**
-1.  First step
-2.  Second step
-3.  Third step
+Welcome to my cybersecurity portfolio.
 
-**Task List:**
-- [x] Completed task
-- [ ] Incomplete task
+## Projects
 
-### Blockquotes
+### Security Operations Lab
+Description here.
 
-> This is a blockquote element. It is commonly used to highlight quotes, notes, or external excerpts within a document.
-
-### Tables
-
-| Name | Role | Location |
-| :--- | :---: | ---: |
-| Alice | Developer | Left-aligned |
-| Bob | Designer | Center-aligned |
-| Charlie | Manager | Right-aligned |
-
-### Code Blocks
-
-You can display inline code like `const x = 5;` within a sentence. For multi-line scripts, use fenced code blocks with language syntax highlighting:
-
-```javascript
-// A simple JavaScript example
-function greetUser(name) {
-    console.log(`Hello, ${name}!`);
-}
-greetUser('Developer');
-```
-remote_theme: pages-themes/modernist@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+### Incident Response Lab
+Description here.
