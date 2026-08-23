@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://taimournazir.github.io/sitemap-index.xml
