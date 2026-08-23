@@ -1,25 +1,35 @@
 currently:
-  - title: AWS Security Specialty
-    text: IAM boundaries, GuardDuty / Detective / Security Hub signal, CloudTrail and VPC flow-log investigation. Cloud is where the alerts are going.
-  - title: HackTheBox CDSA
-    text: "Defensive analyst path: alert triage, Windows and network forensics, SIEM work, a written report at the end. Reps on someone else's evidence, not mine."
   - title: Home SOC lab — Active Directory build-out
-    text: Adding a small AD environment so I can watch Kerberoasting and DCSync events cold instead of reading about them, then write detections for both.
-  - title: One investigation write-up a week
-    text: "Every lab scenario ends the same way: a saved detection, an ATT&CK mapping, and a timeline written as if I were handing the case to the next analyst."
+    text: Adding a small AD environment to generate and investigate Kerberoasting and DCSync activity, then validate detections against the resulting telemetry.
+  - title: AWS Security Specialty
+    text: Building cloud investigation depth across IAM, CloudTrail, GuardDuty, Detective, Security Hub and VPC Flow Logs.
+  - title: Hack The Box CDSA
+    text: Practising alert triage, Windows and network forensics, SIEM analysis and concise incident reporting with third-party lab evidence.
 projects:
   - title: Home SOC lab
     status: running
     tools: Splunk, Elastic, TheHive, Sysmon, Kali
-    text: "Four VMs: Windows Server with Sysmon, PowerShell script-block logging and full Security event logging; an Ubuntu box with auditd and journald; a Kali attacker; an analyst workstation. Winlogbeat and Filebeat ship to Elastic; a Splunk Universal Forwarder ships the same events to Splunk, so I build muscle on SPL and KQL in parallel. The discipline matters more than the stack: every scenario starts with a hypothesis, then I generate the activity, then I hunt for it with no preloaded search. If I cannot find it, that is a detection gap and it goes in the notebook before I fix it."
+    purpose: Build repeatable incident-investigation and detection practice across Windows and Linux telemetry.
+    built: "A four-VM environment: Windows Server with Sysmon, PowerShell script-block logging and Security event logging; Ubuntu with auditd and journald; Kali; and an analyst workstation. Winlogbeat and Filebeat ship to Elastic while a Splunk Universal Forwarder sends the same events to Splunk."
+    evidence: Each scenario begins with a hypothesis and intentionally generated activity. I investigate without a preloaded search, save the resulting SPL and KQL, map the behavior to ATT&CK, and record detection gaps before tuning.
+    limitation: Lab scale does not reproduce the event volume, background noise or access constraints of an enterprise SOC.
+    next_step: Complete the Active Directory build-out, investigate original Kerberoasting and DCSync scenarios, and publish sanitized findings.
   - title: Detection notebook and ATT&CK coverage map
     status: growing
     tools: SPL, KQL, MITRE ATT&CK
-    text: One row per detection—the technique, log source, query, what it misses, and false positives found while tuning. Chained detections get their own entry, because stitching two weak signals into one high-confidence alert is the actual skill. The coverage map tells me what to lab next instead of letting me re-run techniques I am already comfortable with.
+    purpose: Track detection coverage, expose weak assumptions and choose the next lab from evidence rather than familiarity.
+    built: A structured record for each detection, with separate entries for chained detections that combine weak signals into a higher-confidence alert.
+    evidence: Each entry records the ATT&CK technique, log source, SPL or KQL, known blind spots, false positives found during tuning and validation notes.
+    limitation: Coverage currently reflects controlled lab scenarios, not production validation.
+    next_step: Publish sanitized, independently created entries alongside completed portfolio investigations.
   - title: Operational anomaly analytics platform
     status: shipped
     tools: Python, Streamlit, SQLite, pandas
-    text: "Software I built and shipped in a large 24/7 operation: ingest workforce timekeeping data, grade every deviation against a documented rule set, surface repeat patterns, and generate a weekly leadership brief. It is not a security tool, but the shape is identical to detection engineering—normalise messy multi-source data into one schema, apply graded rules with documented exclusions, rank by impact, route the top N to whoever can act, then close the loop and measure whether anyone acted. The part worth discussing in an interview is the exclusion logic: getting the rules wrong does not just create noise, it burns the credibility of the whole system with the people who have to act on its output."
+    purpose: Turn messy operational data into ranked, explainable exceptions that the right person can act on.
+    built: A Python, Streamlit, SQLite and pandas workflow that normalizes multiple inputs, applies graded rules with documented exclusions, surfaces repeat patterns and produces a weekly leadership brief.
+    evidence: The platform was shipped into a 24/7 operation. Its transferable security value is the detection-engineering loop—normalize, detect, rank, route, document and measure follow-through.
+    limitation: Employer data, internal screens, source code, metrics and implementation details are private and will not be published.
+    next_step: Recreate the generic workflow with synthetic data before sharing a public demonstration.
 certifications:
   earned:
     - name: GIAC Certified Incident Handler (GCIH)
@@ -71,4 +81,3 @@ toolkit:
     items: Wireshark · tcpdump · Nmap · Sysinternals · PowerShell · Active Directory · Kerberos auth flows
   - group: Platforms and code
     items: Windows · Linux · AWS · Entra ID sign-in schema (synthetic validation; no live tenant) · Python · SQL · regex
-

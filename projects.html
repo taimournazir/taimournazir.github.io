@@ -5,4 +5,4 @@ description: Security labs, detection engineering, daily drills, and operational
 permalink: /projects/
 ---
 <header class="page-head"><p class="eyebrow">Systems and practice</p><h1>Projects</h1></header>
-<ol class="project-list">{% for project in site.data.content.projects %}<li><p class="entry-meta"><span class="status">{{ project.status }}</span> {{ project.tools }}</p><h2>{{ project.title }}</h2><p>{{ project.text }}</p></li>{% endfor %}</ol>
+<ol class="project-list">{% for project in site.data.content.projects %}<li><p class="entry-meta"><span class="status">{{ project.status }}</span> {{ project.tools }}</p><h2>{{ project.title }}</h2><ul class="project-fields"><li><h3>Purpose</h3><p>{{ project.purpose }}</p></li><li><h3>What I built</h3><p>{{ project.built }}</p></li><li><h3>Evidence</h3><p>{{ project.evidence }}</p></li><li><h3>Current limitation</h3><p>{{ project.limitation }}</p></li><li><h3>Next step</h3><p>{{ project.next_step }}</p></li></ul></li>{% endfor %}</ol>

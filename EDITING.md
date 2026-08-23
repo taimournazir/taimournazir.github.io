@@ -53,10 +53,12 @@ The counter-example uses the wrong arrow, offers no evidence path, and does not 
 
 Open `_data/content.yml`.
 
-- Project: copy one complete block under `projects:` beginning with `- title:` and edit `title`, `status`, `tools`, and `text`.
+- Project: copy one complete block under `projects:` beginning with `- title:` and edit `title`, `status`, `tools`, `purpose`, `built`, `evidence`, `limitation`, and `next_step`.
 - Earned certification: copy one complete block under `certifications: earned:` beginning with `- name:`. Update `name`, `issuer`, `badge`, and `verify`. Put the authentic badge image in `assets/img/certifications/` and use the public credential-verification URL. Do not add dates.
 - In-progress certification: copy one line under `certifications: in_progress:`. It intentionally has no earned badge or verification link.
 - Current work: copy one complete block under `currently:` beginning with `- title:` and edit `title` and `text`.
+
+The homepage intentionally features the first three earned certifications. The About page shows the complete earned list. Reorder `certifications: earned:` to change which three are featured.
 
 Keep indentation exactly as shown. Use spaces, not tabs.
 
@@ -122,4 +124,3 @@ Write only your own reflection on skills you personally practiced. Do not publis
 3. Update current work: edit `currently:` in `_data/content.yml`.
 4. Add an image: upload to `assets/img/`, then use `/assets/img/filename` plus meaningful alt text.
 5. Change identity or contact: edit `_config.yml`; leave `email` empty for LinkedIn fallback.
-
