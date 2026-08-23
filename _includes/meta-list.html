@@ -1,0 +1,4 @@
+{% if include.item.tags %}<p class="chips"><span class="meta-label">Tags</span>{% for tag in include.item.tags %}<span>{{ tag }}</span>{% endfor %}</p>{% endif %}
+{% if include.item.tools %}<p class="chips"><span class="meta-label">Tools</span>{% for tool in include.item.tools %}<span>{{ tool }}</span>{% endfor %}</p>{% endif %}
+{% if include.item.attack %}<p class="chips"><span class="meta-label">ATT&amp;CK</span>{% for technique in include.item.attack %}<a href="https://attack.mitre.org/techniques/{{ technique | replace: '.', '/' }}/">{{ technique }}</a>{% endfor %}</p>{% endif %}
+

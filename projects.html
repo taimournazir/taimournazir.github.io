@@ -1,0 +1,8 @@
+---
+layout: default
+title: Projects
+description: Security labs, detection engineering, daily drills, and operational analytics projects by Taimour Nazir.
+permalink: /projects/
+---
+<header class="page-head"><p class="eyebrow">Systems and practice</p><h1>Projects</h1></header>
+<ol class="project-list">{% for project in site.data.content.projects %}<li><p class="entry-meta"><span class="status">{{ project.status }}</span> {{ project.tools }}</p><h2>{{ project.title }}</h2><p>{{ project.text }}</p></li>{% endfor %}</ol>

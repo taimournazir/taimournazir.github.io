@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="article"><header><div class="entry-meta"><span class="kind">{{ page.kind }}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time></div><h1>{{ page.title }}</h1>{% if page.chain %}<p class="chain">{{ page.chain }}</p>{% endif %}<p class="standfirst">{{ page.description }}</p>{% include meta-list.html item=page %}{% if page.simulated == true %}<aside class="provenance"><strong>Lab / constructed evidence.</strong> This investigation uses intentionally generated activity in a controlled environment; it is not production evidence.</aside>{% endif %}{% if page.hero %}<figure class="hero"><img src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt | escape }}"><figcaption>{{ page.hero_caption }}</figcaption></figure>{% endif %}</header>{{ content }}</article>

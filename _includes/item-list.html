@@ -1,0 +1,5 @@
+<ol class="entry-list">
+{% for item in include.items %}
+  <li><div class="entry-meta"><span class="kind">{{ item.kind }}</span><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%d %b %Y" }}</time></div><h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>{% if item.chain %}<p class="chain">{{ item.chain }}</p>{% endif %}<p>{{ item.description }}</p>{% include meta-list.html item=item %}</li>
+{% endfor %}
+</ol>

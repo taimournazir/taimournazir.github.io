@@ -1,0 +1,31 @@
+title: "Taimour Nazir | Security Analyst"
+description: "Taimour Nazir documents blue-team investigations, detections, and security lab work."
+url: "https://taimournazir.github.io"
+baseurl: ""
+lang: en-US
+timezone: America/New_York
+email: ""
+linkedin: "https://www.linkedin.com/in/taimournazir"
+github: "https://github.com/taimournazir"
+credly: "https://www.credly.com/users/taimour-nazir"
+contact_label: "Contact on LinkedIn"
+permalink: pretty
+markdown: kramdown
+collections:
+  investigations:
+    output: true
+    permalink: /investigations/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+defaults:
+  - scope: { path: "", type: investigations }
+    values: { layout: article }
+  - scope: { path: "", type: notes }
+    values: { layout: article }
+exclude:
+  - EDITING.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - taimournazir.github.io.zip

@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for item in site.pages %}{% unless item.url == '/feed.xml' or item.url == '/sitemap.xml' %}<url><loc>{{ item.url | absolute_url }}</loc></url>{% endunless %}{% endfor %}{% assign investigations = site.investigations | where: "published", true %}{% assign notes = site.notes | where: "published", true %}{% assign entries = investigations | concat: notes %}{% for item in entries %}<url><loc>{{ item.url | absolute_url }}</loc><lastmod>{{ item.date | date_to_xmlschema }}</lastmod></url>{% endfor %}</urlset>

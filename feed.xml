@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>{{ site.title | xml_escape }}</title><link href="{{ '/feed.xml' | absolute_url }}" rel="self"/><link href="{{ '/' | absolute_url }}"/><id>{{ '/' | absolute_url }}</id><updated>{{ site.time | date_to_xmlschema }}</updated>{% assign investigations = site.investigations | where: "published", true %}{% assign notes = site.notes | where: "published", true %}{% assign entries = investigations | concat: notes | sort: "date" | reverse %}{% for item in entries limit:20 %}<entry><title>{{ item.title | xml_escape }}</title><link href="{{ item.url | absolute_url }}"/><id>{{ item.url | absolute_url }}</id><updated>{{ item.date | date_to_xmlschema }}</updated><summary>{{ item.description | xml_escape }}</summary><content type="html">{{ item.content | markdownify | xml_escape }}</content></entry>{% endfor %}</feed>

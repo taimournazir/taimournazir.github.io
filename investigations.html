@@ -1,0 +1,8 @@
+---
+layout: default
+title: Investigations
+description: Blue-team lab investigations, case studies, and detections by Taimour Nazir.
+permalink: /investigations/
+---
+<header class="page-head"><p class="eyebrow">The main body of work</p><h1>Investigations</h1><p>Labs, case studies and detections, newest first. Constructed work is marked on the article itself.</p></header>
+{% assign items = site.investigations | where: "published", true | sort: "date" | reverse %}{% if items.size > 0 %}{% include item-list.html items=items %}{% else %}<p class="empty">Investigations are being prepared for publication.</p>{% endif %}

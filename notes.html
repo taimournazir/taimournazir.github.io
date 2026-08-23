@@ -1,0 +1,8 @@
+---
+layout: default
+title: Notes
+description: Short security notes and reference material by Taimour Nazir.
+permalink: /notes/
+---
+<header class="page-head"><p class="eyebrow">Short-form field notes</p><h1>Notes</h1><p>Reference material and observations kept concise.</p></header>
+{% assign items = site.notes | where: "published", true | sort: "date" | reverse %}{% if items.size > 0 %}{% include item-list.html items=items %}{% else %}<p class="empty">No notes published yet.</p>{% endif %}

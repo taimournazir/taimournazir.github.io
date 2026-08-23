@@ -1,0 +1,60 @@
+currently:
+  - title: AWS Security Specialty
+    text: IAM boundaries, GuardDuty / Detective / Security Hub signal, CloudTrail and VPC flow-log investigation. Cloud is where the alerts are going.
+  - title: HackTheBox CDSA
+    text: "Defensive analyst path: alert triage, Windows and network forensics, SIEM work, a written report at the end. Reps on someone else's evidence, not mine."
+  - title: Home SOC lab — Active Directory build-out
+    text: Adding a small AD environment so I can watch Kerberoasting and DCSync events cold instead of reading about them, then write detections for both.
+  - title: One investigation write-up a week
+    text: "Every lab scenario ends the same way: a saved detection, an ATT&CK mapping, and a timeline written as if I were handing the case to the next analyst."
+projects:
+  - title: Home SOC lab
+    status: running
+    tools: Splunk, Elastic, TheHive, Sysmon, Kali
+    text: "Four VMs: Windows Server with Sysmon, PowerShell script-block logging and full Security event logging; an Ubuntu box with auditd and journald; a Kali attacker; an analyst workstation. Winlogbeat and Filebeat ship to Elastic; a Splunk Universal Forwarder ships the same events to Splunk, so I build muscle on SPL and KQL in parallel. The discipline matters more than the stack: every scenario starts with a hypothesis, then I generate the activity, then I hunt for it with no preloaded search. If I cannot find it, that is a detection gap and it goes in the notebook before I fix it."
+  - title: Detection notebook and ATT&CK coverage map
+    status: growing
+    tools: SPL, KQL, MITRE ATT&CK
+    text: One row per detection—the technique, log source, query, what it misses, and false positives found while tuning. Chained detections get their own entry, because stitching two weak signals into one high-confidence alert is the actual skill. The coverage map tells me what to lab next instead of letting me re-run techniques I am already comfortable with.
+  - title: Project Aegis
+    status: ongoing
+    tools: Daily drill system
+    text: "One scenario a day: impossible travel, encoded PowerShell, Kerberoasting spikes, C2 beaconing, password spray. I read it cold, record myself explaining it, then compare against a model script and re-record. Weekends are full case files with dead ends and incomplete information, narrated start to finish without notes. Technical depth gets you the interview; briefing a stressed on-call peer in ninety seconds gets you the job."
+  - title: Operational anomaly analytics platform
+    status: shipped
+    tools: Python, Streamlit, SQLite, pandas
+    text: "Software I built and shipped in a large 24/7 operation: ingest workforce timekeeping data, grade every deviation against a documented rule set, surface repeat patterns, and generate a weekly leadership brief. It is not a security tool, but the shape is identical to detection engineering—normalise messy multi-source data into one schema, apply graded rules with documented exclusions, rank by impact, route the top N to whoever can act, then close the loop and measure whether anyone acted. The part worth discussing in an interview is the exclusion logic: getting the rules wrong does not just create noise, it burns the credibility of the whole system with the people who have to act on its output."
+certifications:
+  earned:
+    - GIAC Certified Incident Handler (GCIH) — GIAC / SANS
+    - GIAC Security Essentials (GSEC) — GIAC / SANS
+    - GIAC Foundational Cybersecurity Technologies (GFACT) — GIAC / SANS
+    - CompTIA Security+ — CompTIA
+    - Certified in Cybersecurity (CC) — ISC2
+    - Google Cybersecurity Professional Certificate — Google
+  in_progress:
+    - AWS Certified Security — Specialty — Amazon Web Services
+    - Certified Defensive Security Analyst (CDSA) — Hack The Box
+timeline:
+  - year: 2025 — present
+    title: SANS Technology Institute, Cyber Immersion Academy
+    text: SEC275, SEC401 (Security Essentials), SEC504 (Hacker Tools and Incident Handling). GFACT, GSEC and GCIH earned out of it.
+  - year: "2024"
+    title: Masterschool cybersecurity program
+    text: "The on-ramp: fundamentals, first labs, and the decision to commit to blue team rather than spread thin."
+  - year: 2018 — present
+    title: Amazon. Associate → Process Assistant → Area Manager
+    text: Promoted twice. Now leading a shift in a large automated fulfilment operation—real-time dashboards, severity calls, cross-functional response with maintenance, safety and HR, then the written root-cause afterwards.
+  - year: "2013"
+    title: Iqra University, BSc Computer Science
+    text: The foundation I came back to.
+toolkit:
+  - group: Detection and analysis
+    items: Splunk (SPL) · Elastic Stack / Kibana · KQL (Sentinel-compatible queries; Elastic in lab) · Sysmon · Windows Event Logs · auditd · Wazuh
+  - group: Response and casework
+    items: TheHive · Cortex · PICERL · MITRE ATT&CK mapping · Timeline reconstruction · Written escalation
+  - group: Network and host
+    items: Wireshark · tcpdump · Nmap · Sysinternals · PowerShell · Active Directory · Kerberos auth flows
+  - group: Platforms and code
+    items: Windows · Linux · AWS · Entra ID sign-in schema (synthetic validation; no live tenant) · Python · SQL · regex
+
