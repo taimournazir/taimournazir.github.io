@@ -54,7 +54,8 @@ The counter-example uses the wrong arrow, offers no evidence path, and does not 
 Open `_data/content.yml`.
 
 - Project: copy one complete block under `projects:` beginning with `- title:` and edit `title`, `status`, `tools`, and `text`.
-- Certification: copy one line under either `certifications: earned:` or `certifications: in_progress:`. Do not add dates.
+- Earned certification: copy one complete block under `certifications: earned:` beginning with `- name:`. Update `name`, `issuer`, `badge`, and `verify`. Put the authentic badge image in `assets/img/certifications/` and use the public credential-verification URL. Do not add dates.
+- In-progress certification: copy one line under `certifications: in_progress:`. It intentionally has no earned badge or verification link.
 - Current work: copy one complete block under `currently:` beginning with `- title:` and edit `title` and `text`.
 
 Keep indentation exactly as shown. Use spaces, not tabs.

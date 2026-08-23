@@ -16,22 +16,36 @@ projects:
     status: growing
     tools: SPL, KQL, MITRE ATT&CK
     text: One row per detection—the technique, log source, query, what it misses, and false positives found while tuning. Chained detections get their own entry, because stitching two weak signals into one high-confidence alert is the actual skill. The coverage map tells me what to lab next instead of letting me re-run techniques I am already comfortable with.
-  - title: Project Aegis
-    status: ongoing
-    tools: Daily drill system
-    text: "One scenario a day: impossible travel, encoded PowerShell, Kerberoasting spikes, C2 beaconing, password spray. I read it cold, record myself explaining it, then compare against a model script and re-record. Weekends are full case files with dead ends and incomplete information, narrated start to finish without notes. Technical depth gets you the interview; briefing a stressed on-call peer in ninety seconds gets you the job."
   - title: Operational anomaly analytics platform
     status: shipped
     tools: Python, Streamlit, SQLite, pandas
     text: "Software I built and shipped in a large 24/7 operation: ingest workforce timekeeping data, grade every deviation against a documented rule set, surface repeat patterns, and generate a weekly leadership brief. It is not a security tool, but the shape is identical to detection engineering—normalise messy multi-source data into one schema, apply graded rules with documented exclusions, rank by impact, route the top N to whoever can act, then close the loop and measure whether anyone acted. The part worth discussing in an interview is the exclusion logic: getting the rules wrong does not just create noise, it burns the credibility of the whole system with the people who have to act on its output."
 certifications:
   earned:
-    - GIAC Certified Incident Handler (GCIH) — GIAC / SANS
-    - GIAC Security Essentials (GSEC) — GIAC / SANS
-    - GIAC Foundational Cybersecurity Technologies (GFACT) — GIAC / SANS
-    - CompTIA Security+ — CompTIA
-    - Certified in Cybersecurity (CC) — ISC2
-    - Google Cybersecurity Professional Certificate — Google
+    - name: GIAC Certified Incident Handler (GCIH)
+      issuer: GIAC
+      badge: /assets/img/certifications/gcih.png
+      verify: https://www.credly.com/badges/8a3703ed-4f22-4a5b-a71e-d09140c16822/public_url
+    - name: GIAC Security Essentials (GSEC)
+      issuer: GIAC
+      badge: /assets/img/certifications/gsec.png
+      verify: https://www.credly.com/badges/43b3267d-df69-4663-827d-978f9a7d7190/public_url
+    - name: GIAC Foundational Cybersecurity Technologies (GFACT)
+      issuer: GIAC
+      badge: /assets/img/certifications/gfact.png
+      verify: https://www.credly.com/badges/87fa7cab-2cf3-4921-bafc-443fa5f74959/public_url
+    - name: CompTIA Security+
+      issuer: CompTIA
+      badge: /assets/img/certifications/security-plus.png
+      verify: https://www.credly.com/badges/e3f53b74-02a8-4461-b59a-a41a8c06e349/public_url
+    - name: Certified in Cybersecurity (CC)
+      issuer: ISC2
+      badge: /assets/img/certifications/isc2-cc.png
+      verify: https://www.credly.com/badges/7d59edd7-c1e8-4596-bbbd-d61815ca0eb4/public_url
+    - name: Google Cybersecurity Professional Certificate
+      issuer: Google / Coursera
+      badge: /assets/img/certifications/google-cybersecurity.png
+      verify: https://www.credly.com/badges/1116b08c-3f5e-4536-8c20-ac5cdfcdcf74/public_url
   in_progress:
     - AWS Certified Security — Specialty — Amazon Web Services
     - Certified Defensive Security Analyst (CDSA) — Hack The Box
