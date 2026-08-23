@@ -110,6 +110,10 @@ Create a branch in GitHub before editing. Commit changes to that branch, then op
 
 Publish no employer-internal information. Naming the employer and describing the role generically is enough. Mark lab and constructed work with `simulated: true`. Never invent figures, identifiers, logs, hostnames, or metrics. Every detection must explain what it misses and its false positives. Do not add claims you could not defend in an interview.
 
+### Protect third-party training material
+
+Write only your own reflection on skills you personally practiced. Do not publish or submit course books, workbooks, slides, lab files, screenshots, answer keys, datasets, packet captures, virtual machines, distinctive fictional scenario details, exact lab titles, course-only commands, or copied/closely paraphrased instructions. Do not reconstruct a lab step by step. Describe your own investigation method, what you learned, the evidence you personally generated, and how you would apply the skill defensively. When a provider's license is stricter, follow that license. If you are unsure whether a detail came from your own work or the course material, leave it out until you have written permission.
+
 ## Five-operation cheat sheet
 
 1. Publish an investigation: copy `_investigations/_template.md`, write it, set `published: true`.
@@ -117,3 +121,4 @@ Publish no employer-internal information. Naming the employer and describing the
 3. Update current work: edit `currently:` in `_data/content.yml`.
 4. Add an image: upload to `assets/img/`, then use `/assets/img/filename` plus meaningful alt text.
 5. Change identity or contact: edit `_config.yml`; leave `email` empty for LinkedIn fallback.
+
